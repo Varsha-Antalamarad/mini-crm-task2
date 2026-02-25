@@ -1,0 +1,492 @@
+/* ===== Base ===== */
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #f6f8fb;
+  color: #0f172a;
+  padding: 20px;
+}
+
+h1, h2 {
+  margin: 0 0 12px;
+  letter-spacing: .3px;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Center Layout ===== */
+.page-center {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* ===== Form Card ===== */
+.lead-form {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  max-width: 1000px;        /* ⬅️ wider box */
+  width: 200%;
+  padding: 20px 24px;     /* slightly more side padding */
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+
+}
+
+/* ===== Form Fields ===== */
+.lead-form > input,
+.lead-form > select,
+.lead-form > textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;        /* clear spacing between fields */
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 14px;
+  background: #ffffff;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.lead-form > input:focus,
+.lead-form > select:focus,
+.lead-form > textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* Textareas (rigid + not merged) */
+.lead-form > textarea {
+  resize: none;
+  min-height: 70px;
+  background: #fbfdff;
+}
+
+/* Extra spacing between Notes and Follow-up */
+.lead-form > textarea + textarea {
+  margin-top: 6px;
+}
+
+/* ===== Buttons ===== */
+button,
+.lead-form button {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .1s ease, box-shadow .1s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* ===== Back Link ===== */
+.back-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+th {
+  background: #0f172a;
+  color: #ffffff;
+  text-align: left;
+  padding: 12px;
+  font-size: 13px;
+  letter-spacing: .4px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eef2f7;
+  font-size: 14px;
+}
+
+tr:hover td {
+  background: #f8fafc;
+}
+
+/* ===== Stats ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 12px 0 16px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px 12px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.stat-card span {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.stat-card strong {
+  font-size: 22px;
+  color: #0f172a;
+}
+
+/* ===== Filters ===== */
+.filters {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  margin: 12px 0 14px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* ===== Logout Button ===== */
+.logout-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.logout-btn:hover {
+  opacity: 0.95;
+}
+.lead-form button {
+  padding: 14px;
+  font-size: 15px;
+}
+/* Add extra gap before the Notes textarea */
+.lead-form select + textarea {
+  margin-top: 12px;   /* space between dropdown and Notes */
+}
+
+/* Add extra gap between Notes and Follow-up textarea */
+.lead-form textarea + textarea {
+  margin-top: 10px;   /* space between the two big boxes */
+}
+/* Slight separator effect for textareas */
+.lead-form textarea {
+  box-shadow: inset 0 1px 0 rgba(15, 23, 42, 0.03);
+}
+/* Ensure inputs respect card padding (no edge overlap) */
+.lead-form {
+  box-sizing: border-box;
+}
+
+.lead-form > input,
+.lead-form > select,
+.lead-form > textarea {
+  box-sizing: border-box;     /* width includes padding + border */
+  width: 100%;
+}
+/* Center page content */
+.page-center {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center the title */
+.page-title {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Wrapper to stack form + back link */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centers the box */
+}
+
+/* Back link exactly below the form */
+.back-link {
+  margin-top: 10px;
+  text-align: center;
+}
+/* Center the login page */
+.login-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #eef2ff, #f6f8fb 60%);
+}
+
+/* Login card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  padding: 28px 26px 24px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+  text-align: center;
+}
+
+/* Title */
+.login-card h2 {
+  margin-bottom: 16px;
+  color: #0f172a;
+  letter-spacing: .4px;
+}
+
+/* Inputs */
+.login-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.login-card input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* Button – different style from other pages */
+.login-card button {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #0ea5e9);
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: .3px;
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.35);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.login-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(99, 102, 241, 0.45);
+}
+/* Top bar for logout */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+/* ===== CRM Dashboard – Elegant Admin Theme ===== */
+
+/* Page title + top bar */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  letter-spacing: .4px;
+  color: #0f172a;
+}
+
+/* Stats cards */
+.stats {
+  gap: 14px;
+  margin: 14px 0 18px;
+}
+
+.stat-card {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid #eef2f7;
+}
+
+.stat-card strong {
+  font-size: 26px;
+  color: #0f172a;
+}
+
+.stat-card span {
+  font-size: 12px;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+}
+
+/* Filters row */
+.filters {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  margin-bottom: 10px;
+}
+
+.filters input,
+.filters select {
+  background: #fbfdff;
+  border-radius: 10px;
+}
+
+.filters button {
+  border-radius: 999px;
+  padding: 10px 16px;
+}
+
+/* Add lead link */
+.add-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 12px;
+  font-weight: 700;
+}
+
+/* Table container */
+.table-wrap {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  border-radius: 16px;
+  padding: 6px;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.1);
+}
+
+/* Table */
+table {
+  border-radius: 12px;
+}
+
+th {
+  background: linear-gradient(135deg, #0f172a, #1f2933);
+  font-size: 13px;
+}
+
+td {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+tr:hover td {
+  background: #f1f5f9;
+}
+
+/* Status pills */
+.status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status.new {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.status.contacted {
+  background: #ecfeff;
+  color: #0e7490;
+}
+
+.status.converted {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+/* Action links */
+td a {
+  font-weight: 700;
+}
+
+td a.edit {
+  color: #2563eb;
+  margin-right: 8px;
+}
+
+td a.delete {
+  color: #ef4444;
+}
+
+/* Logout button (top right) */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.logout-btn {
+  border-radius: 999px;
+  padding: 8px 16px;
+  box-shadow: 0 8px 18px rgba(239, 68, 68, 0.35);
+}
+
+/* Subtle page background */
+body {
+  background: radial-gradient(circle at top, #eef2ff, #f6f8fb 60%);
+}
+/* Dashboard title styling */
+.page-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #0f172a;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Gradient underline */
+.page-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #6366f1, #0ea5e9);
+  transform:translatex(-50%);
+}
