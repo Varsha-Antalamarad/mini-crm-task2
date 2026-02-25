@@ -8,7 +8,6 @@ if (!isset($_SESSION['admin'])) {
 
 <?php include "db.php"; ?>
 <?php
-// Stats
 $total = $conn->query("SELECT COUNT(*) AS c FROM leads")->fetch_assoc()['c'];
 $newCount = $conn->query("SELECT COUNT(*) AS c FROM leads WHERE status='New'")->fetch_assoc()['c'];
 $contacted = $conn->query("SELECT COUNT(*) AS c FROM leads WHERE status='Contacted'")->fetch_assoc()['c'];

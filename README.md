@@ -39,9 +39,5 @@ This application helps manage client leads, track their status, add notes and fo
 - Structuring a small backend project  
 - Working with dashboards and simple analytics  
 
-## 📷 Screenshots
-(Add screenshots here later if you want)
-
----
 
 Built with ❤️ as part of the Future Interns Internship Program.
